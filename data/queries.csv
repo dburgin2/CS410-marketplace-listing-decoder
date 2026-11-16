@@ -1,0 +1,41 @@
+query_id,query,category,split,hard_constraints_json,preferences_json
+Q001,Computer desk under $150,desks,development,"[{""field"": ""price"", ""operator"": ""lt"", ""value"": 150}]",[]
+Q002,Desk less than 48 inches wide,desks,development,"[{""field"": ""width"", ""operator"": ""lt"", ""value"": 48}]",[]
+Q003,Desk with a metal base under $250,desks,development,"[{""field"": ""base_metal"", ""operator"": ""eq"", ""value"": true}, {""field"": ""price"", ""operator"": ""lt"", ""value"": 250}]",[]
+Q004,Desk at least 55 inches wide and 25 inches deep,desks,evaluation,"[{""field"": ""width"", ""operator"": ""ge"", ""value"": 55}, {""field"": ""depth"", ""operator"": ""ge"", ""value"": 25}]",[]
+Q005,Desk with an engineered-wood top under $400,desks,evaluation,"[{""field"": ""top_engineered"", ""operator"": ""eq"", ""value"": true}, {""field"": ""price"", ""operator"": ""lt"", ""value"": 400}]",[]
+Q006,"Desk under $200 and less than 30 inches high, preferably no wider than 40 inches",desks,evaluation,"[{""field"": ""price"", ""operator"": ""lt"", ""value"": 200}, {""field"": ""height"", ""operator"": ""lt"", ""value"": 30}]","[{""field"": ""width"", ""operator"": ""le"", ""value"": 40}]"
+Q007,Desk under $100 with depth less than 24 inches,desks,evaluation,"[{""field"": ""price"", ""operator"": ""lt"", ""value"": 100}, {""field"": ""depth"", ""operator"": ""lt"", ""value"": 24}]",[]
+Q008,Side table under $100,tables,development,"[{""field"": ""table_type"", ""operator"": ""eq"", ""value"": ""side""}, {""field"": ""price"", ""operator"": ""lt"", ""value"": 100}]",[]
+Q009,Table with a glass top under $350,tables,development,"[{""field"": ""top_glass"", ""operator"": ""eq"", ""value"": true}, {""field"": ""price"", ""operator"": ""lt"", ""value"": 350}]",[]
+Q010,Dining table at least 50 inches wide,tables,evaluation,"[{""field"": ""table_type"", ""operator"": ""eq"", ""value"": ""dining""}, {""field"": ""width"", ""operator"": ""ge"", ""value"": 50}]",[]
+Q011,Coffee table less than 20 inches high and under $300,tables,evaluation,"[{""field"": ""table_type"", ""operator"": ""eq"", ""value"": ""coffee""}, {""field"": ""height"", ""operator"": ""lt"", ""value"": 20}, {""field"": ""price"", ""operator"": ""lt"", ""value"": 300}]",[]
+Q012,Console table with a wooden top under $450,tables,evaluation,"[{""field"": ""table_type"", ""operator"": ""eq"", ""value"": ""console""}, {""field"": ""top_wood"", ""operator"": ""eq"", ""value"": true}, {""field"": ""price"", ""operator"": ""lt"", ""value"": 450}]",[]
+Q013,"Table less than 18 inches wide, preferably under $60",tables,development,"[{""field"": ""width"", ""operator"": ""lt"", ""value"": 18}]","[{""field"": ""price"", ""operator"": ""lt"", ""value"": 60}]"
+Q014,Solid-wood table under $500,tables,evaluation,"[{""field"": ""solid_top"", ""operator"": ""eq"", ""value"": true}, {""field"": ""price"", ""operator"": ""lt"", ""value"": 500}]",[]
+Q015,Dining chair under $200,chairs,development,"[{""field"": ""dining_chair"", ""operator"": ""eq"", ""value"": true}, {""field"": ""price"", ""operator"": ""lt"", ""value"": 200}]",[]
+Q016,Office chair less than 25 inches wide,chairs,development,"[{""field"": ""office_chair"", ""operator"": ""eq"", ""value"": true}, {""field"": ""width"", ""operator"": ""lt"", ""value"": 25}]",[]
+Q017,Chair with a metal frame under $200,chairs,development,"[{""field"": ""frame_metal"", ""operator"": ""eq"", ""value"": true}, {""field"": ""price"", ""operator"": ""lt"", ""value"": 200}]",[]
+Q018,Reclining chair under $400,chairs,evaluation,"[{""field"": ""reclining"", ""operator"": ""eq"", ""value"": true}, {""field"": ""price"", ""operator"": ""lt"", ""value"": 400}]",[]
+Q019,Chair with a wooden frame under $300,chairs,evaluation,"[{""field"": ""frame_wood"", ""operator"": ""eq"", ""value"": true}, {""field"": ""price"", ""operator"": ""lt"", ""value"": 300}]",[]
+Q020,Chair under $200 with overall width less than 20 inches,chairs,evaluation,"[{""field"": ""price"", ""operator"": ""lt"", ""value"": 200}, {""field"": ""width"", ""operator"": ""lt"", ""value"": 20}]",[]
+Q021,"Chair no taller than 40 inches, preferably under $150",chairs,evaluation,"[{""field"": ""height"", ""operator"": ""le"", ""value"": 40}]","[{""field"": ""price"", ""operator"": ""lt"", ""value"": 150}]"
+Q022,Sofa at least 50 inches wide under $500,sofas,development,"[{""field"": ""width"", ""operator"": ""ge"", ""value"": 50}, {""field"": ""price"", ""operator"": ""lt"", ""value"": 500}]",[]
+Q023,Sofa 50 to 80 inches wide and less than 40 inches deep,sofas,development,"[{""field"": ""width"", ""operator"": ""between"", ""value"": [50, 80]}, {""field"": ""depth"", ""operator"": ""lt"", ""value"": 40}]",[]
+Q024,Reclining loveseat under $800,sofas,evaluation,"[{""field"": ""loveseat"", ""operator"": ""eq"", ""value"": true}, {""field"": ""reclining"", ""operator"": ""eq"", ""value"": true}, {""field"": ""price"", ""operator"": ""lt"", ""value"": 800}]",[]
+Q025,Fabric-upholstered sofa at least 75 inches wide,sofas,evaluation,"[{""field"": ""fabric"", ""operator"": ""eq"", ""value"": true}, {""field"": ""width"", ""operator"": ""ge"", ""value"": 75}]",[]
+Q026,Sofa taller than 30 inches and less than 70 inches wide,sofas,evaluation,"[{""field"": ""height"", ""operator"": ""gt"", ""value"": 30}, {""field"": ""width"", ""operator"": ""lt"", ""value"": 70}]",[]
+Q027,"Sofa under $400, preferably 60 to 80 inches wide",sofas,evaluation,"[{""field"": ""price"", ""operator"": ""lt"", ""value"": 400}]","[{""field"": ""width"", ""operator"": ""between"", ""value"": [60, 80]}]"
+Q028,Couch at least 80 inches wide and 35 inches deep,sofas,evaluation,"[{""field"": ""width"", ""operator"": ""ge"", ""value"": 80}, {""field"": ""depth"", ""operator"": ""ge"", ""value"": 35}]",[]
+Q029,Dresser under $300,dressers,development,"[{""field"": ""price"", ""operator"": ""lt"", ""value"": 300}]",[]
+Q030,Dresser less than 36 inches wide,dressers,development,"[{""field"": ""width"", ""operator"": ""lt"", ""value"": 36}]",[]
+Q031,Dresser taller than 40 inches and under $400,dressers,evaluation,"[{""field"": ""height"", ""operator"": ""gt"", ""value"": 40}, {""field"": ""price"", ""operator"": ""lt"", ""value"": 400}]",[]
+Q032,Dresser that includes engineered wood under $400,dressers,evaluation,"[{""field"": ""general_engineered"", ""operator"": ""eq"", ""value"": true}, {""field"": ""price"", ""operator"": ""lt"", ""value"": 400}]",[]
+Q033,Dresser at least 55 inches wide and less than 20 inches deep,dressers,evaluation,"[{""field"": ""width"", ""operator"": ""ge"", ""value"": 55}, {""field"": ""depth"", ""operator"": ""lt"", ""value"": 20}]",[]
+Q034,"Dresser under $150, preferably less than 35 inches high",dressers,evaluation,"[{""field"": ""price"", ""operator"": ""lt"", ""value"": 150}]","[{""field"": ""height"", ""operator"": ""lt"", ""value"": 35}]"
+Q035,Nightstand under $150,nightstands,development,"[{""field"": ""price"", ""operator"": ""lt"", ""value"": 150}]",[]
+Q036,Bedside table less than 20 inches wide and 25 inches high,nightstands,development,"[{""field"": ""width"", ""operator"": ""lt"", ""value"": 20}, {""field"": ""height"", ""operator"": ""lt"", ""value"": 25}]",[]
+Q037,Nightstand whose top includes engineered wood under $150,nightstands,evaluation,"[{""field"": ""top_engineered"", ""operator"": ""eq"", ""value"": true}, {""field"": ""price"", ""operator"": ""lt"", ""value"": 150}]",[]
+Q038,Nightstand at least 24 inches wide,nightstands,evaluation,"[{""field"": ""width"", ""operator"": ""ge"", ""value"": 24}]",[]
+Q039,Nightstand under $200 and less than 18 inches deep,nightstands,evaluation,"[{""field"": ""price"", ""operator"": ""lt"", ""value"": 200}, {""field"": ""depth"", ""operator"": ""lt"", ""value"": 18}]",[]
+Q040,"Nightstand at least 24 inches high, preferably under $150",nightstands,evaluation,"[{""field"": ""height"", ""operator"": ""ge"", ""value"": 24}]","[{""field"": ""price"", ""operator"": ""lt"", ""value"": 150}]"
