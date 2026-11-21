@@ -4,7 +4,8 @@ import json
 import re
 import sys
 
-csv.field_size_limit(sys.maxsize)
+# Windows uses a 32-bit C long for this limit, even on 64-bit Python.
+csv.field_size_limit(2**31 - 1)
 
 FILL = ["price", "width_in", "depth_in", "height_in",
         "top_material", "frame_material", "base_material", "upholstery_material", "general_material",
@@ -40,10 +41,14 @@ def main():
         row["price"] = src["price"]
         row.update({"features": src["features"], "description": src["description"]})
         rows.append(row)
-    with open("item_facts.csv", "w", newline="", encoding="utf-8-sig") as f:
-        writer = csv.DictWriter(f, fieldnames=list(rows[0]))
-        writer.writeheader()
-        writer.writerows(rows)
+    try:
+        with open("item_facts.csv", "x", newline="", encoding="utf-8-sig") as f:
+            writer = csv.DictWriter(f, fieldnames=list(rows[0]))
+            writer.writeheader()
+            writer.writerows(rows)
+    except FileExistsError:
+        sys.exit("Refusing to overwrite item_facts.csv. Edit the existing sheet, or back it up "
+                 "and rename it before creating a new one.")
     print(f"wrote {len(rows)} rows to item_facts.csv", file=sys.stderr)
 
 
